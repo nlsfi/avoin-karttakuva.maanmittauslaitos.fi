@@ -6,7 +6,7 @@ This directory contains template Style JSON files for vector tiles service.
 The vector tile service requires API key registration.
 API key can be generated at <https://omatili.maanmittauslaitos.fi>
 
-## download Style JSON files with API keys
+## download template Style JSON files with API keys
 
 (requires API key as username)
 
@@ -16,7 +16,9 @@ API key can be generated at <https://omatili.maanmittauslaitos.fi>
 - <https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/stylejson/v20/backgroundmap.json?TileMatrixSet=WGS84_Pseudo-Mercator>
 - <https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/stylejson/v20/backgroundmap.json?TileMatrixSet=ETRS-TM35FIN>
 
-## modify templates by hand
+Downloaded files can be edited with any vector tiles editors.
+
+## add API-key by hand
 
 Replace text #USER-TMS# with tilematrixset, one of:
 
@@ -24,3 +26,5 @@ Replace text #USER-TMS# with tilematrixset, one of:
 - ETRS-TM35FIN
 
 Replace text #USER-APIKEY# with your API key.
+
+Modified files can be edited with any vector tiles editors.
