@@ -11,9 +11,17 @@ API key can be generated at <https://omatili.maanmittauslaitos.fi>
 ## download Style JSON files
 
 Style JSON files with proper API keys are available for download.
-Downloaded files can be edited with any vector tiles editors.
+The links below add API key to URLs and the downloaded style JSON files are ready to use and edit.
+Downloaded style JSON files can be edited with any vector tiles editors.
 
 (use API key as username)
+
+Quick Start Use
+
+- <https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/stylejson/v20/generic.json?TileMatrixSet=WGS84_Pseudo-Mercator>
+- <https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/stylejson/v20/generic.json?TileMatrixSet=ETRS-TM35FIN>
+
+Background map styles
 
 - <https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/stylejson/v20/taustakartta.json?TileMatrixSet=WGS84_Pseudo-Mercator>
 - <https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/stylejson/v20/taustakartta.json?TileMatrixSet=ETRS-TM35FIN>
