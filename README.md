@@ -1,6 +1,12 @@
 # avoin-karttakuva.maanmittauslaitos.fi
 
-More info on Open API available at websites
+Production Open API domain for National Land Survey vector tiles API
+
+# beta-karttakuva.maanmittauslaitos.fi
+
+Demo and information domain for National Land Survey vector tiles API
+
+More infos and demo client apps for Open API available at 
 
 - <https://beta-karttakuva.maanmittauslaitos.fi> 
 - <https://maanmittauslaitos.fi>
