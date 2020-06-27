@@ -3,6 +3,10 @@
 Production Open API domain for National Land Survey vector tiles API
 
 This repository contains some resource templates but API key authorization is required to production use.
+Information on how to acquire the API key available at <https://beta-karttakuva.maanmittauslaitos.fi> 
+
+Links to resources with API key in place are available at <https://beta-karttakuva.maanmittauslaitos.fi> 
+
 
 
 
