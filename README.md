@@ -10,3 +10,7 @@ More infos and demo client apps for Open API available at
 
 - <https://beta-karttakuva.maanmittauslaitos.fi> 
 - <https://maanmittauslaitos.fi>
+
+Related
+
+- <https://github.com/nlsfi/beta-karttakuva.maanmittauslaitos.fi>
