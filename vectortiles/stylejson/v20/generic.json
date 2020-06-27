@@ -1,0 +1,236 @@
+{
+  "version" : 8,
+  "name" : "NLS Basemap",
+  "center" : [ 21.645, 63.101 ],
+  "zoom" : 11.35,
+ "sources": {
+   "taustakartta": {
+     "type": "vector",
+     "url": "https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/tilejson/taustakartta/1.0.0/taustakartta/default/v20/#USER-TMS#/tilejson.json?api-key=#USER-APIKEY#"
+   }
+ },
+  "glyphs": "https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/glyphs/{fontstack}/{range}.pbf?api-key=#USER-APIKEY#",
+  "layers" : [ {
+    "id" : "background",
+    "type" : "background",
+    "paint" : {
+      "background-color" : "#ffffff"
+    }
+  }, {
+    "id" : "symboli",
+    "source" : "taustakartta",
+    "source-layer" : "symboli",
+    "type" : "circle",
+    "paint" : {
+      "circle-color" : "#191000",
+      "circle-radius" : 3
+    }
+  }, {
+    "id" : "hallintoalue",
+    "source" : "taustakartta",
+    "source-layer" : "hallintoalue",
+    "type" : "line",
+    "paint" : {
+      "line-color" : "black",
+      "line-width" : 1
+    }
+  }, {
+    "id" : "maasto_viiva",
+    "source" : "taustakartta",
+    "type" : "line",
+    "source-layer" : "maasto_viiva",
+    "paint" : {
+      "line-color" : "black",
+      "line-width" : 1
+    }
+  }, {
+    "id" : "vesisto_alue",
+    "source" : "taustakartta",
+    "source-layer" : "vesisto_alue",
+    "type" : "line",
+    "paint" : {
+      "line-color" : "black",
+      "line-width" : 1
+    }
+  }, {
+    "id" : "rakennelma",
+    "source" : "taustakartta",
+    "source-layer" : "rakennelma",
+    "type" : "line",
+    "paint" : {
+      "line-color" : "black",
+      "line-width" : 1
+    }
+  }, {
+    "id" : "maastoaluereuna",
+    "source" : "taustakartta",
+    "source-layer" : "maastoaluereuna",
+    "type" : "line",
+    "paint" : {
+      "line-color" : "black",
+      "line-width" : 1
+    }
+  }, {
+    "id" : "liikenne_viiva",
+    "source" : "taustakartta",
+    "source-layer" : "liikenne",
+    "type" : "line",
+    "filter" : [ "==", [ "geometry-type" ], "LineString" ],
+    "layout" : { },
+    "paint" : {
+      "line-color" : "black",
+      "line-width" : 1
+    }
+  }, {
+    "id" : "liikenne_alue",
+    "source" : "taustakartta",
+    "source-layer" : "liikenne",
+    "type" : "line",
+    "filter" : [ "==", [ "geometry-type" ], "Polygon" ],
+    "layout" : { },
+    "paint" : {
+      "line-color" : "hsl(200, 80%, 75%)",
+      "line-width" : 2.5
+    }
+  }, {
+    "id" : "liikenne",
+    "source" : "taustakartta",
+    "source-layer" : "liikenne",
+    "type" : "symbol",
+    "layout" : {
+      "text-field" : "{nimi_suomi}        {nimi_ruotsi}",
+      "text-font" : [ "Liberation Sans NLSFI" ],
+      "symbol-placement" : "line",
+      "text-size" : 12
+    },
+    "paint" : {
+      "text-color" : "#000",
+      "text-halo-color" : "#fff",
+      "text-halo-width" : 1.5,
+      "text-halo-blur" : 1
+    }
+  }, {
+    "id" : "tienumerot",
+    "source" : "taustakartta",
+    "source-layer" : "liikenne",
+    "type" : "symbol",
+    "filter" : [ "all", [ "<", "tieluokka", 5 ], [ ">", "tieluokka", 0 ] ],
+    "layout" : {
+      "text-field" : "{tienumero}",
+      "text-font" : [ "Liberation Sans NLSFI" ],
+      "symbol-placement" : "line",
+      "text-size" : 16
+    },
+    "paint" : {
+      "text-color" : "#f00",
+      "text-halo-color" : "#fff",
+      "text-halo-width" : 2,
+      "text-halo-blur" : 1
+    }
+  }, {
+    "id" : "maankaytto",
+    "source" : "taustakartta",
+    "source-layer" : "maankaytto",
+    "type" : "line",
+    "paint" : {
+      "line-color" : "hsl(200, 80%, 75%)",
+      "line-width" : 2.5
+    }
+  }, {
+    "id" : "vesisto_viiva",
+    "source" : "taustakartta",
+    "source-layer" : "vesisto_viiva",
+    "type" : "line",
+    "paint" : {
+      "line-color" : "#90C8FF",
+      "line-width" : 1
+    }
+  }, {
+    "id" : "maasto_alue",
+    "source" : "taustakartta",
+    "source-layer" : "maasto_alue",
+    "type" : "line",
+    "paint" : {
+      "line-color" : "#90C8FF",
+      "line-width" : 1
+    }
+  }, {
+    "id" : "korkeus_viiva",
+    "type" : "line",
+    "source" : "taustakartta",
+    "source-layer" : "korkeus",
+    "minzoom" : 11,
+    "maxzoom" : 20,
+    "paint" : {
+      "line-color" : "rgba(252, 179, 110, 1)",
+      "line-width" : 1
+    }
+  }, {
+    "id" : "korkeus_paaviiva",
+    "type" : "line",
+    "source" : "taustakartta",
+    "source-layer" : "korkeus",
+    "minzoom" : 13,
+    "filter" : [ "all", [ "has", "korkeusarvo" ], [ "==", [ "%", [ "get", "korkeusarvo" ], 20000 ], 0 ] ],
+    "paint" : {
+      "line-color" : "rgba(252, 179, 110, 1)",
+      "line-width" : 2.5
+    }
+  }, {
+    "id" : "korkeus_paaviiva2",
+    "type" : "line",
+    "source" : "taustakartta",
+    "source-layer" : "korkeus",
+    "minzoom" : 11,
+    "maxzoom" : 14,
+    "filter" : [ "all", [ "has", "korkeus" ], [ "==", [ "%", [ "get", "korkeus" ], 20 ], 0 ] ],
+    "paint" : {
+      "line-color" : "rgba(252, 179, 110, 1)",
+      "line-width" : 2
+    }
+  }, {
+    "id" : "nimisto",
+    "source" : "taustakartta",
+    "source-layer" : "nimisto",
+    "type" : "symbol",
+    "layout" : {
+      "text-field" : [ "coalesce", [ "get", "nimi_fin" ], [ "get", "nimi_swe" ], [ "get", "nimi_sme" ], [ "get", "nimi_sms" ], [ "get", "nimi_smn" ] ],
+      "icon-ignore-placement" : true,
+      "icon-allow-overlap" : false,
+      "text-font" : [ "Liberation Sans NLSFI" ],
+      "visibility" : "visible"
+    },
+    "paint" : {
+      "text-halo-width" : 2,
+      "text-halo-color" : "white",
+      "text-color" : "black",
+      "text-halo-blur" : 1
+    }
+  }, {
+    "id" : "maasto_piste",
+    "source" : "taustakartta",
+    "source-layer" : "maasto_piste",
+    "type" : "circle",
+    "paint" : {
+      "circle-radius" : 3,
+      "circle-color" : "black"
+    }
+  }, {
+    "id" : "rakennus",
+    "source" : "taustakartta",
+    "source-layer" : "rakennus",
+    "type" : "fill",
+    "paint" : {
+      "fill-color" : [ "match", [ "get", "kohdeluokka" ], [ 42110, 42111, 42112, 42210, 42211, 42213 ], "#f57654", [ 42120, 42121, 42122, 42220, 42221, 42222 ], "#d0d0c8", [ 42130, 42131, 42132, 42230, 42231, 42232 ], "#fFaf9c", [ 42140, 42141, 42142, 42240, 42241, 42242 ], "#d0d0a0", "#d0d0d0" ]
+    }
+  }, {
+    "id" : "alueraja",
+    "source" : "taustakartta",
+    "type" : "line",
+    "source-layer" : "alueraja",
+    "paint" : {
+      "line-width" : 1,
+      "line-color" : "rgba(0,192,0,1)"
+    }
+  } ]
+}
