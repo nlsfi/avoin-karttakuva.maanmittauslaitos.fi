@@ -28,3 +28,7 @@ Background map styles
 
 - <https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/stylejson/v20/backgroundmap.json?TileMatrixSet=WGS84_Pseudo-Mercator>
 - <https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/stylejson/v20/backgroundmap.json?TileMatrixSet=ETRS-TM35FIN>
+
+More Info 
+
+- <https://beta-karttakuva.maanmittauslaitos.fi>
