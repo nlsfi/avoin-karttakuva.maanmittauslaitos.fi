@@ -16,16 +16,20 @@ Information on the Vector Tiles services (in finnish)
 Information on the WMTS raster services  (in finnish)
 - <https://www.maanmittauslaitos.fi/kartat-ja-paikkatieto/asiantuntevalle-kayttajalle/kartta-ja-paikkatietojen-rajapintapalvelut-1>
 
+Information on the geocoding service (in finnish)
+- <https://www.maanmittauslaitos.fi/kartat-ja-paikkatieto/asiantuntevalle-kayttajalle/kartta-ja-paikkatietojen-rajapintapalvelut-26> 
+
 
 
 # beta-karttakuva.maanmittauslaitos.fi
 
 Demo and information domain for National Land Survey vector tiles API
-
-More infos and demo client apps for Open API available at 
+More infos and demo client apps for Open API available at . 
 
 - <https://beta-karttakuva.maanmittauslaitos.fi> 
 - <https://maanmittauslaitos.fi>
+
+All the demos use vector, raster and geocoding services of avoin-karttakuva.maanmittauslaitos.fi
 
 Related
 
