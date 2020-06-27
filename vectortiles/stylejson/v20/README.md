@@ -13,7 +13,8 @@ API key can be generated at <https://omatili.maanmittauslaitos.fi>
 Style JSON files with proper API keys are available for download.
 The links below add API key to URLs and the downloaded style JSON files are ready to use and edit.
 The style JSON files include generated tilejson URL with API key.
-Downloaded style JSON files can be edited with any vector tiles editors.
+
+Downloaded style JSON files can be edited with any style json editors.
 
 (use API key as username)
 
