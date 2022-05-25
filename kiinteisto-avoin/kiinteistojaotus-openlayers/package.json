@@ -1,0 +1,18 @@
+{
+  "name": "kiinteistojaotus-openlayers",
+  "version": "1.0.0",
+  "source": "index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "dependencies": {
+    "ol": "6.14.1",
+    "proj4": "^2.7.5"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.5.0"
+  }
+}
