@@ -24,7 +24,6 @@ Information on the WMTS raster services  (in finnish)
 
 Related
 
-- <https://github.com/nlsfi/avoin-karttakuva.maanmittauslaitos.fi>
 - <https://github.com/nlsfi/beta-karttakuva.maanmittauslaitos.fi>
 - <https://github.com/nlsfi/avoin-paikkatieto.maanmittauslaitos.fi>
 - <https://github.com/nlsfi/sopimus-paikkatieto.maanmittauslaitos.fi>
