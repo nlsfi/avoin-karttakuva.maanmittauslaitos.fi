@@ -1,7 +1,7 @@
 This repository contains some resource templates but API key authorization is required to production use.
 
 Information on how to acquire the API key available at
-- <https://www.maanmittauslaitos.fi/rajapinnat/kartat-ja-paikkatieto/avoimet-rajapintapalvelut> 
+- <https://www.maanmittauslaitos.fi/kartat-ja-paikkatieto/asiantuntevalle-kayttajalle/paikkatietojen-rajapintapalvelut/api-avaimen> 
 
 Links to vector tiles resources with API key in place are available at 
 - <https://beta-karttakuva.maanmittauslaitos.fi> 
@@ -16,10 +16,10 @@ Production Open API domain for National Land Survey vector tiles API for the fol
 
 
 Information on the Vector Tiles services (in finnish)
-- <https://www.maanmittauslaitos.fi/kartat-ja-paikkatieto/asiantuntevalle-kayttajalle/kartta-ja-paikkatietojen-rajapintapalvelut-37>
+- <https://www.maanmittauslaitos.fi/karttakuvapalvelu/tekninen-kuvaus-vektoritiilet>
 
 Information on the WMTS raster services  (in finnish)
-- <https://www.maanmittauslaitos.fi/kartat-ja-paikkatieto/asiantuntevalle-kayttajalle/kartta-ja-paikkatietojen-rajapintapalvelut-1>
+- <https://www.maanmittauslaitos.fi/karttakuvapalvelu/tekninen-kuvaus-wmts>
 
 
 Related
