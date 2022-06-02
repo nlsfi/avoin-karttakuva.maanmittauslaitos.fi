@@ -1,4 +1,4 @@
-These instructions and screenshots are made by using QGIS 3.24.0-Hannover version.
+These instructions and screenshots are made by using QGIS 3.24.0-Tisler version.
 
 Cadastre Vector Tiles service requires API-key to be funtional. Instructions how to create and get your own API-key can be found here (only in finnish): Information on how to get The API key for Open API services
 
