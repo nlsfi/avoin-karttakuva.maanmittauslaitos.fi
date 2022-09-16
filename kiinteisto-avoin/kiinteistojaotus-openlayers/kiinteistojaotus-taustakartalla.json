@@ -9,12 +9,12 @@
       "type": "raster",
       "tileSize": 256,
       "tiles": [
-        "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/taustakartta/default/WGS84_Pseudo-Mercator/{z}/{y}/{x}.png?api-key=INSERT-YOUR-API-KEY"
+        "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/taustakartta/default/WGS84_Pseudo-Mercator/{z}/{y}/{x}.png?api-key=7cd2ddae-9f2e-481c-99d0-404e7bc7a0b2"
       ]
     },
     "kiinteisto-avoin": {
       "type": "vector",
-      "url": "https://avoin-karttakuva.maanmittauslaitos.fi/kiinteisto-avoin/v3/kiinteistojaotus/WGS84_Pseudo-Mercator/tilejson.json?api-key=INSERT-YOUR-API-KEY"
+      "url": "https://avoin-karttakuva.maanmittauslaitos.fi/kiinteisto-avoin/v3/kiinteistojaotus/WGS84_Pseudo-Mercator/tilejson.json?api-key=7cd2ddae-9f2e-481c-99d0-404e7bc7a0b2"
     }
   },
   "layers": [
