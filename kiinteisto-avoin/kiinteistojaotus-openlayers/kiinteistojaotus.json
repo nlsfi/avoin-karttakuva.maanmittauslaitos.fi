@@ -6,10 +6,10 @@
   "sources" : {
     "kiinteisto-avoin" : {
       "type" : "vector",
-      "url" : "https://avoin-karttakuva.maanmittauslaitos.fi/kiinteisto-avoin/v3/kiinteistojaotus/WGS84_Pseudo-Mercator/tilejson.json?api-key=7cd2ddae-9f2e-481c-99d0-404e7bc7a0b2"
+      "url" : "https://avoin-karttakuva.maanmittauslaitos.fi/kiinteisto-avoin/v3/kiinteistojaotus/WGS84_Pseudo-Mercator/tilejson.json?api-key=INSERT-YOUR-API-KEY"
     }
   },
-  "glyphs" : "https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/glyphs/{fontstack}/{range}.pbf?api-key=7cd2ddae-9f2e-481c-99d0-404e7bc7a0b2",
+  "glyphs" : "https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/glyphs/{fontstack}/{range}.pbf?api-key=INSERT-YOUR-API-KEY",
   "layers" : [ {
     "id" : "background",
     "type" : "background",
