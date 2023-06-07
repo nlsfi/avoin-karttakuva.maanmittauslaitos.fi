@@ -8,8 +8,8 @@
     "build": "parcel build --public-url ./"
   },
   "dependencies": {
-    "ol": "7.1.0",
-    "proj4": "^2.8.0"
+    "ol": "7.3.0",
+    "proj4": "^2.9.0"
   },
   "devDependencies": {
     "buffer": "^6.0.3",

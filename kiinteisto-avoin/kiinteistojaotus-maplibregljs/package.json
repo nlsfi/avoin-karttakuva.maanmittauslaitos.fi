@@ -8,7 +8,7 @@
     "build": "parcel build --public-url ./"
   },
   "dependencies": {
-    "maplibre-gl": "^2.4.0"
+    "maplibre-gl": "^3.0.1"
   },
   "devDependencies": {
     "parcel": "^2.5.0"
