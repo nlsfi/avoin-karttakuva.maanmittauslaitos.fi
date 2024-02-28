@@ -8,11 +8,11 @@
     "build": "parcel build --public-url ./"
   },
   "dependencies": {
-    "ol": "7.3.0",
-    "proj4": "^2.9.0"
+    "ol": "9.0.0",
+    "ol-mapbox-style": "^12.2.0",
+    "proj4": "^2.10.0"
   },
   "devDependencies": {
-    "buffer": "^6.0.3",
     "parcel": "^2.5.0"
   }
 }
