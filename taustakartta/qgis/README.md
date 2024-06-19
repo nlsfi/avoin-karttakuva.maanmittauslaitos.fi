@@ -17,13 +17,13 @@ https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/taustakartta/wmts/1.0.
 
 Click OK. Connection is made and user can drag and drop vector tile layers from the Browser window to the main map window.
 
-<H2>Change symbology</H2>
+<H2>Use QGIS layer symbology</H2>
 
-National Land Survey of Finland has developed style sheet file for the QGIS users (taustakartta.qml). There are some minor differences between the symbology of WMS/WMTS services and vector tile services due to the technical differences of these services.
+National Land Survey of Finland has developed style sheet file for the QGIS users ![taustakartta.qml](./taustakartta.qml). There are some minor differences between the symbology of WMS/WMTS services and vector tile services due to the technical differences of these services.
 
 ![Load style sheet](./images/load_style.png)
 
-Select the qml file
+Select the qml file and click Load style button and Ok.
 
 ![Select style sheet file](./images/map_window_screenshot.png)
 
