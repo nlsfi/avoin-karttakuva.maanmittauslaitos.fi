@@ -1,0 +1,124 @@
+{
+  "version": 8,
+  "name": "kiinteisto-avoin",
+  "center": [24.91769,60.169455],
+  "zoom": 15,
+  "glyphs": "https://beta-karttakuva.maanmittauslaitos.fi/glyphs/{fontstack}/{range}.pbf",
+  "sources": {
+    "rasteritaustakartta": {
+      "type": "raster",
+      "tileSize": 256,
+      "tiles": [
+        "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/taustakartta/default/WGS84_Pseudo-Mercator/{z}/{y}/{x}.png?api-key=INSERT-YOUR-API-KEY"
+      ]
+    },
+    "kiinteisto-avoin": {
+      "type": "vector",
+      "url": "https://avoin-karttakuva.maanmittauslaitos.fi/kiinteisto-avoin/v3/kiinteistojaotus/WGS84_Pseudo-Mercator/tilejson.json?api-key=INSERT-YOUR-API-KEY"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "white"
+      }
+    },
+    {
+      "id": "taustakartta",
+      "type": "raster",
+      "source": "rasteritaustakartta"
+    },
+    {
+      "id": "PalstanSijaintitiedot",
+      "type": "fill",
+      "source": "kiinteisto-avoin",
+      "source-layer": "PalstanSijaintitiedot",
+      "minzoom": 9,
+      "paint": {
+        "fill-color": "rgba(255,255,255,0.05)"
+      }
+    },
+    {
+      "id": "KiinteistorajanSijaintitiedot",
+      "type": "line",
+      "source": "kiinteisto-avoin",
+      "source-layer": "KiinteistorajanSijaintitiedot",
+      "filter": [
+        "==",
+        [
+          "geometry-type"
+        ],
+        "LineString"
+      ],
+      "minzoom": 9,
+      "paint": {
+        "line-color": "rgba(255,0,0,1)",
+        "line-width": 1
+      }
+    },
+    {
+      "id": "RajamerkinSijaintitiedot",
+      "type": "circle",
+      "source": "kiinteisto-avoin",
+      "source-layer": "RajamerkinSijaintitiedot",
+      "minzoom": 11,
+      "filter": [
+        "==",
+        [
+          "geometry-type"
+        ],
+        "Point"
+      ],
+      "paint": {
+        "circle-stroke-color": "rgba(255,255,255,1)",
+        "circle-color": "rgba(255,0,0,1)",
+        "circle-radius": 3
+      }
+    },
+    {
+      "id": "KiinteistotunnuksenSijaintitiedot",
+      "type": "symbol",
+      "source": "kiinteisto-avoin",
+      "source-layer": "KiinteistotunnuksenSijaintitiedot",
+      "minzoom": 12,
+      "layout": {
+        "text-field": "{kiinteistotunnuksenEsitysmuoto}",
+        "text-font": [
+          "Liberation Sans NLSFI"
+        ],
+        "symbol-placement": "point",
+        "text-size": 16
+      },
+      "paint": {
+        "text-color": "#000",
+        "text-halo-color": "#fff",
+        "text-halo-width": 1.5,
+        "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "RajamerkinSijaintitiedot_tunnus",
+      "type": "symbol",
+      "source": "kiinteisto-avoin",
+      "source-layer": "RajamerkinSijaintitiedot",
+      "minzoom": 12,
+      "layout": {
+        "text-field": "{numero}",
+        "text-font": [
+          "Liberation Sans NLSFI"
+        ],
+        "symbol-placement": "point",
+        "text-size": 12
+      },
+      "paint": {
+        "text-color": "#800000",
+        "text-halo-color": "#fff",
+        "text-halo-width": 1.5,
+        "text-halo-blur": 1
+      }
+    }
+  ],
+  "id": "kiinteisto-avoin"
+}
