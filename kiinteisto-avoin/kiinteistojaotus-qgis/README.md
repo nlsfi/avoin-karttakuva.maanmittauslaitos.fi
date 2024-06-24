@@ -1,4 +1,4 @@
-These instructions and screenshots are made by using QGIS 3.24.0-Hannover version.
+These instructions and screenshots are made by using QGIS 3.24.0-Tisler version.
 
 Cadastre Vector Tiles service requires API-key to be funtional. Instructions how to create and get your own API-key can be found here (only in finnish): Information on how to get The API key for Open API services
 
@@ -31,9 +31,9 @@ Click OK. Connection is made and user can drag and drop vector tile layers from 
 
 ![Map window](./images/map_window_screenshot.png)
 
-<H2>Define</H2>
+<H2>Modify symbology</H2>
 
-User can check and modify symbology of the vector tiles in QGIS. Head to Layer Properties -> Symbology/Labels.Double click a layer and redesign the symbology.
+User can check and modify symbology of the vector tiles in QGIS. Head to Layer Properties -> Symbology/Labels. Double click a layer and redesign the symbology.
 
 ![Layer properties](./images/layer_symbology_screenshot.png)
 
