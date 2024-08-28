@@ -25,7 +25,7 @@ National Land Survey of Finland has developed style sheet file for the QGIS user
 
 Select the qml file and click Load style button and Ok.
 
-![Select style sheet file](./images/map_window_screenshot.png)
+![Select style sheet file](./taustakartta.qml)
 
 
 
