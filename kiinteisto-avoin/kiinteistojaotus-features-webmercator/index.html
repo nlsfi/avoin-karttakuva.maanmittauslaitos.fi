@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Kiinteistötietojen OGC API Features ja vektoritiilet</title>
+  <style>
+    .map {
+      font-family: sans-serif;
+      width: 100%;
+      height: 100%;
+      position: fixed
+    }
+
+    #information {
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+      width: 30rem;
+      height: 71vh;
+      overflow: scroll;
+      box-shadow: 5px 0 8px rgb(0 0 0 / 30%);
+      z-index: 100;
+      background-color: white;
+
+    }
+
+    .info {
+      padding: 0.5rem;
+    }
+
+    .controls {
+      position: absolute;
+      right: 1rem;
+      top: 3rem;
+      width: 30rem;
+      height: 11rem;
+      overflow: scroll-y;
+      background-color: white;
+      border: 1px solid #dadada;
+      padding: 0.5rem;
+      box-shadow: 5px 0 8px rgb(0 0 0 / 30%);
+      z-index: 100;
+    }
+
+    .info a {
+      display: inline-block;
+      font-family: Arial, sans-serif;
+      margin: 0.2rem;
+    }
+
+    .entry {
+      border: 1px solid lightblue;
+      margin: .5rem;
+      padding: .5rem;
+      box-shadow: 3px 0 6px rgb(0 0 0 / 30%);
+    }
+
+    .entry img {
+      background-color: #fafafa;
+      border: 1px solid #f0f0f0;
+
+    }
+
+    .entry a {
+      display: block;
+    }
+
+    pre {
+      font-family: 'Verdana';
+    }
+
+    h1 {
+      font-size: 1rem !important;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+  <script type="module" src="./index.js"></script>
+
+</head>
+
+<body>
+  <div id="controls" class="controls">
+    <h1>Kiinteistötietojen kyselypalvelu (OGC API Features)</h1>
+    <div>
+      <button id="bbox" title="bbox" type="button" class="btn btn-primary">
+        <span class="bi bi-bounding-box-circles" style="font-size: 1rem; color: white;"></span>
+      </button>
+      <button id="poly" title="poly" type="button" class="btn btn-primary">
+        <span class="bi bi-pentagon" style="font-size: 1rem; color: white;"></span>
+      </button>
+      <button id="line" title="line" type="button" class="btn btn-primary">
+        <span class="bi bi-activity" style="font-size: 1rem; color: white;"></span>
+      </button>
+      <button id="cancel" title="bbox" type="button" class="btn btn-light">
+        <span class="bi bi-backspace" style="font-size: 1rem; color: blue;"></span>
+      </button>
+    </div>
+    <div id="state"></div>
+  </div>
+  <div id="information" class="accordion">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingZero">
+        <button id="bgTypeSelectionTitle" class="accordion-button" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+          Taustavalinnat
+        </button>
+      </h2>
+      <div id="collapseZero" class="accordion-collapse" aria-labelledby="headingZero"
+        xdata-bs-parent="#information">
+        <div id="bgSelections" class="accordion-body">
+          <span>&nbsp;</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button id="featTypeSelectionTitle" class="accordion-button" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Kohdevalinnat
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse" aria-labelledby="headingOne"
+        xdata-bs-parent="#information">
+        <div id="featureOpts" class="accordion-body">
+          <span>&nbsp;</span>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button id="featurePropertiesTitle" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          Kohteiden tiedot
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
+        xdata-bs-parent="#information">
+        <div class="accordion-body">
+          <div id="info" class="info">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div id="map" class="map"></div>
+</body>
+
+</html>

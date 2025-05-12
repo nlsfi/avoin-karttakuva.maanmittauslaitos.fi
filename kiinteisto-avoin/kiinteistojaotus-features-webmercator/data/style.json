@@ -1,0 +1,401 @@
+{
+    "version": 8,
+    "name": "NLS Basemap",
+    "center": [
+        24.75455625,
+        60.18793718
+    ],
+    "zoom": 15,
+    "sources": {
+        "rasteritaustakartta": {
+            "type": "raster",
+            "tileSize": 256,
+            "tiles": [
+                "https://avoin-karttakuva.maanmittauslaitos.fi/avoin/wmts/1.0.0/taustakartta/default/WGS84_Pseudo-Mercator/{z}/{y}/{x}.png?api-key=[AVOIN-NLS-API-KEY]"
+            ]
+        },
+        "kipa": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": []
+            }
+        }
+    },
+    "glyphs": "https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/glyphs/{fontstack}/{range}.pbf?api-key=[AVOIN-NLS-API-KEY]",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "paint": {
+                "background-color": "white"
+            }
+        },
+        {
+            "id": "taustakartta",
+            "type": "raster",
+            "source": "rasteritaustakartta"
+        },
+        {
+            "id": "KunnanRekisterinpitoalueenSijaintitiedot_style",
+            "type": "fill",
+            "source": "kipa",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    [
+                        "get",
+                        "featureType"
+                    ],
+                    "KunnanRekisterinpitoalueenSijaintitiedot"
+                ],
+                [
+                    "==",
+                    [
+                        "geometry-type"
+                    ],
+                    "Polygon"
+                ]
+            ],
+            "paint": {
+                "fill-color": "rgba(158,202,225,0.5)"
+            }
+        },
+        {
+            "id": "ProjisoidunPalstanSijaintitiedot_style",
+            "type": "fill",
+            "source": "kipa",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    [
+                        "get",
+                        "featureType"
+                    ],
+                    "ProjisoidunPalstanSijaintitiedot"
+                ],
+                [
+                    "==",
+                    [
+                        "geometry-type"
+                    ],
+                    "Polygon"
+                ]
+            ],
+            "paint": {
+                "fill-color": "#fa9fb5"
+            }
+        },
+        {
+            "id": "PalstanSijaintitiedot_style",
+            "type": "fill",
+            "source": "kipa",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    [
+                        "get",
+                        "featureType"
+                    ],
+                    "PalstanSijaintitiedot"
+                ],
+                [
+                    "==",
+                    [
+                        "geometry-type"
+                    ],
+                    "Polygon"
+                ]
+            ],
+            "paint": {
+                "fill-color": "rgba(240,240,240,0.6)"
+            }
+        },
+        {
+            "id": "PalstanSijaintitiedot_boundarystyle",
+            "type": "line",
+            "source": "kipa",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    [
+                        "get",
+                        "featureType"
+                    ],
+                    "PalstanSijaintitiedot"
+                ],
+                [
+                    "==",
+                    [
+                        "geometry-type"
+                    ],
+                    "Polygon"
+                ]
+            ],
+            "paint": {
+                "line-color": "rgba(0,0,0,1)",
+                "line-width": 1
+            }
+        },
+        {
+            "id": "KayttooikeusyksikonOsanSijaintitiedot_style_polygon",
+            "type": "fill",
+            "source": "kipa",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    [
+                        "get",
+                        "featureType"
+                    ],
+                    "KayttooikeusyksikonOsanSijaintitiedot"
+                ],
+                [
+                    "==",
+                    [
+                        "geometry-type"
+                    ],
+                    "Polygon"
+                ]
+            ],
+            "paint": {
+                "fill-color": "rgba(173,221,142,0.8)"
+            }
+        },
+        {
+            "id": "KayttooikeusyksikonOsanSijaintitiedot_style_viiva",
+            "type": "fill",
+            "source": "kipa",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    [
+                        "get",
+                        "featureType"
+                    ],
+                    "KayttooikeusyksikonOsanSijaintitiedot"
+                ],
+                [
+                    "==",
+                    [
+                        "geometry-type"
+                    ],
+                    "LineString"
+                ]
+            ],
+            "paint": {
+                "line-color": "rgba(173,221,142,0.8)",
+                "line-width": 2
+            }
+        },
+        {
+            "id": "KayttooikeusyksikonOsanSijaintitiedot_tunnus",
+            "type": "symbol",
+            "source": "kipa",
+            "minzoom": 15,
+            "layout": {
+                "text-field": "{kayttooikeusyksikonOsanTunnuksenEsitysmuoto}",
+                "text-font": [
+                    "Roboto"
+                ],
+                "symbol-placement": "point",
+                "text-size": 12
+            },
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "featureType"
+                ],
+                "KayttooikeusyksikonOsanSijaintitiedot"
+            ],
+            "paint": {
+                "text-color": "#000",
+                "text-halo-color": "#fff",
+                "text-halo-width": 1.5,
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "KiinteistorajanSijaintitiedot",
+            "type": "line",
+            "source": "kipa",
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "featureType"
+                ],
+                "KiinteistorajanSijaintitiedot"
+            ],
+            "paint": {
+                "line-color": "rgba(255,0,0,1)",
+                "line-width": 1
+            }
+        },
+        {
+            "id": "RajamerkinSijaintitiedot",
+            "type": "circle",
+            "source": "kipa",
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "featureType"
+                ],
+                "RajamerkinSijaintitiedot"
+            ],
+            "paint": {
+                "circle-stroke-color": "rgba(255,255,255,1)",
+                "circle-color": "rgba(255,0,0,1)",
+                "circle-radius": 2
+            }
+        },
+        {
+            "id": "RajamerkinSijaintitiedot_tunnus",
+            "type": "symbol",
+            "source": "kipa",
+            "minzoom": 15,
+            "layout": {
+                "text-field": "{numero}",
+                "text-font": [
+                    "Roboto"
+                ],
+                "symbol-placement": "point",
+                "text-size": 12
+            },
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "featureType"
+                ],
+                "RajamerkinSijaintitiedot"
+            ],
+            "paint": {
+                "text-color": "#800000",
+                "text-halo-color": "#fff",
+                "text-halo-width": 1.5,
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "KiinteistotunnuksenSijaintitiedot",
+            "type": "symbol",
+            "source": "kipa",
+            "minzoom": 15,
+            "layout": {
+                "text-field": "{kiinteistotunnuksenEsitysmuoto}",
+                "text-font": [
+                    "Roboto"
+                ],
+                "symbol-placement": "point",
+                "text-size": 12
+            },
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "featureType"
+                ],
+                "KiinteistotunnuksenSijaintitiedot"
+            ],
+            "paint": {
+                "text-color": "#000",
+                "text-halo-color": "#fff",
+                "text-halo-width": 1.5,
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "ProjisoidunPalstanKiinteistotunnuksenSijaintitiedot",
+            "type": "symbol",
+            "source": "kipa",
+            "minzoom": 15,
+            "layout": {
+                "text-field": "{kiinteistotunnuksenEsitysmuoto}",
+                "text-font": [
+                    "Roboto"
+                ],
+                "symbol-placement": "point",
+                "text-size": 12
+            },
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "featureType"
+                ],
+                "ProjisoidunPalstanKiinteistotunnuksenSijaintitiedot"
+            ],
+            "paint": {
+                "text-color": "#000",
+                "text-halo-color": "#fff",
+                "text-halo-width": 1.5,
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "MaaraalanOsanSijaintitiedot_style_polygon",
+            "type": "fill",
+            "source": "kipa",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    [
+                        "get",
+                        "featureType"
+                    ],
+                    "MaaraalanOsanSijaintitiedot"
+                ],
+                [
+                    "==",
+                    [
+                        "geometry-type"
+                    ],
+                    "Polygon"
+                ]
+            ],
+            "paint": {
+                "fill-color": "rgba(254,196,79,0.9)"
+            }
+        },
+        {
+            "id": "MaaraalanOsanSijaintitiedot_tunnus",
+            "type": "symbol",
+            "source": "kipa",
+            "layout": {
+                "text-field": "{maaraalatunnuksenEsitysmuoto}",
+                "text-font": [
+                    "Roboto"
+                ],
+                "symbol-placement": "point",
+                "text-size": 12
+            },
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "featureType"
+                ],
+                "MaaraalanOsanSijaintitiedot"
+            ],
+            "paint": {
+                "text-color": "#000",
+                "text-halo-color": "#fff",
+                "text-halo-width": 1.5,
+                "text-halo-blur": 1
+            }
+        }
+
+
+    ],
+    "id": "NLS-Basemap"
+}
