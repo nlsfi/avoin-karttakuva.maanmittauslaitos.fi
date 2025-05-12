@@ -1,0 +1,22 @@
+{
+  "name": "kiinteistojaotus-features-webmercator",
+  "version": "1.1.0",
+  "source": "index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+"dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "ol": "10.3.1",
+    "ol-mapbox-style": "12.3.1",
+    "proj4": "^2.15.0",
+    "webfont-matcher": "^1.1.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.3"
+  }
+}
