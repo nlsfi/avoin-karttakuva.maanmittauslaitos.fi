@@ -35,7 +35,7 @@ register(proj4);
 const wkt = new WKT();
 
 const
-  apiKey = '7cd2ddae-9f2e-481c-99d0-404e7bc7a0b2',
+  apiKey = '<INSERT-YOUR-API-KEY>',
   apiVer = 'v3',
   apiVerUrl = `https://avoin-paikkatieto.maanmittauslaitos.fi/kiinteisto-avoin/simple-features/${apiVer}`;
 

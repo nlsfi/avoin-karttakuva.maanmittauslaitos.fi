@@ -25,7 +25,7 @@ export async function features(func, endpoint, feat, params) {
 ```
 
 USAGE
-- 1) replace the free maanmittauslaitos.fi API-key on line 37 of index.js with one of your own
+- 1) replace the free maanmittauslaitos.fi API-key on line 38 of index.js with one of your own
 - 2) npm i
 - 3) npm start
 - 4) browse to http://localhost:5173/
