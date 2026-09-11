@@ -1,6 +1,6 @@
 {
   "name": "kiinteistojaotus-features-webmercator",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "source": "index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
@@ -9,14 +9,14 @@
     "serve": "vite preview"
   },
 "dependencies": {
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.11.3",
-    "ol": "10.8.0",
-    "ol-mapbox-style": "13.2.1",
-    "proj4": "^2.20.2",
+    "ol": "10.10.0",
+    "ol-mapbox-style": "13.4.1",
+    "proj4": "^2.20.9",
     "webfont-matcher": "^1.1.0"
   },
   "devDependencies": {
-    "vite": "7.3.1"
+    "vite": "8.2.2"
   }
 }

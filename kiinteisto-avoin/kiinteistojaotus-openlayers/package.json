@@ -7,12 +7,12 @@
     "start": "vite",
     "build": "vite build"
    },
-  "dependencies": {
-    "ol": "10.8.0",
-    "ol-mapbox-style": "13.2.1",
-    "proj4": "^2.20.2"
+ "dependencies": {
+    "ol": "10.10.0",
+    "ol-mapbox-style": "^13.4.1",
+    "proj4": "^2.20.9"
   },
   "devDependencies": {
-   "vite": "7.3.1"
+    "vite": "8.2.0"
   }
 }
